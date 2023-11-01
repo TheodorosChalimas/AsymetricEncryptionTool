@@ -1,0 +1,41 @@
+#README for assigment3 course HPY414
+
+Code in C programming language that utilizes an asymmetric encryption tool in C. The tool provides RSA key-pair generation, encryption and decryption
+
+Folder contains:
+	-main.c
+	"Contains the main() function and the input decode logic."
+	
+	-rsa.c   + header file
+	"Contains the C code used for utilizing the RSA algorithm."
+	
+	-utils.c + header file
+	"Contains the frequently used functions for error and debuging prints."
+	
+	-Makefile
+    	"make all <--make an executable called assign_3."
+	
+	-txt files
+	"Used to evaluate the implementation."
+
+
+TASKS:	1 >> ./assign_3 -i hpy414_encryptme_pub.txt -o TUC2014030157_encrypted_pub.txt -k hpy414_public.key -e
+	tested with : 
+	  >> ./assign_3 -i TUC2014030157_encrypted_pub.txt -o test1.txt -k hpy414_private.key -d
+				--------------------------------	
+	2 >> ./assign_3 -i hpy414_decryptme_pub.txt -o TUC2014030157_decrypted_pub.txt -k hpy414_public.key -d
+				--------------------------------	
+	3 >> ./assign_3 -i hpy414_encryptme_priv.txt -o TUC2014030157_encrypted_priv.txt -k hpy414_private.key -e
+	tested with : 
+	  >> ./assign_3 -i TUC2014030157_encrypted_priv.txt -o test2.txt -k hpy414_public.key -d	
+				--------------------------------	
+	4 >> ./assign_3 -i hpy414_decryptme_priv.txt -o TUC2014030157_decrypted_priv.txt -k hpy414_private.key -d
+	
+*After running each command the program prints the input file name and its size as well as the output file and its size.*
+
+The modular exponentiation function used in code was implementeed based on the following example:
+from: https://www.geeksforgeeks.org/modular-exponentiation-recursive/
+
+
+There are comments on the code for further code explanation.
+- Chalimas Theodoros <thodorischa@gmail.com>
